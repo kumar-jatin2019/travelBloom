@@ -10,8 +10,11 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f5f5f5;
+    background-image: url('Images/country.jpeg'); /* Use forward slash */
+    background-repeat: no-repeat; /* Ensure no repeat */
+    background-size: cover; /* Make it cover the entire viewport */
+    background-position: center; /* Center the image */
 }
-
 /* Navigation Bar */
 .navbar {
     display: flex;
@@ -124,6 +127,34 @@ body {
 .recommendations-section {
     margin: 20px;
     text-align: center;
+}
+
+/* Recommendations Section */
+.recommendations {
+    padding: 20px;
+}
+
+.city-card {
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+}
+
+.city-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.city-card h3 {
+    margin: 10px 0;
+}
+
+.city-card p {
+    font-size: 0.9em;
+    color: #555;
 }
 
 #results-container {
