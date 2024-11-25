@@ -9,12 +9,16 @@ body, ul {
 body {
     font-family: Arial, sans-serif;
     color: #333;
+    background-image: url('Images/new.jpg');
     background-color: #f5f5f5;
-    background-image: url('Images/country.jpeg'); /* Use forward slash */
     background-repeat: no-repeat; /* Ensure no repeat */
     background-size: cover; /* Make it cover the entire viewport */
-    background-position: center; /* Center the image */
+    background-position: center center; /* Center the image both horizontally and vertically */
+    background-attachment: fixed; /* Makes the background image fixed during scrolling */
+    min-height: 100vh; /* Ensure it covers the entire height of the viewport */
 }
+
+
 /* Navigation Bar */
 .navbar {
     display: flex;
@@ -23,7 +27,7 @@ body {
     background-color: #0a74da;
     padding: 10px 20px;
     color: white;
-    flex-wrap: wrap; /* Adjust for small screens */
+    flex-wrap: wrap;
 }
 
 .navbar .logo {
@@ -35,7 +39,7 @@ body {
     list-style-type: none;
     display: flex;
     gap: 15px;
-    flex-wrap: wrap; /* Adjust links for smaller screens */
+    flex-wrap: wrap;
 }
 
 .navbar .nav-links a {
@@ -54,7 +58,7 @@ body {
 .search-section input {
     padding: 10px;
     width: 60%;
-    max-width: 400px; /* Limit width on larger screens */
+    max-width: 400px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -112,6 +116,7 @@ body {
     cursor: pointer;
 }
 
+/* Social Links */
 .social-links {
     margin-top: 20px;
 }
@@ -123,22 +128,38 @@ body {
     font-size: 1.1em;
 }
 
-/* Recommendations Section */
-.recommendations-section {
-    margin: 20px;
-    text-align: center;
+/* Recommendations Container */
+#recommendationsContainer {
+    display: none; /* Hidden by default */
 }
 
-/* Recommendations Section */
-.recommendations {
+#recommendationsContainer.show {
+    display: flex; /* Flex layout for showing cards */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Clean shadow effect */
 }
 
+/* City Card Style */
 .city-card {
     display: inline-block;
     width: 250px;
     margin: 10px;
     text-align: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;  /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow around cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.city-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
 }
 
 .city-card img {
@@ -175,14 +196,12 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    /* Adjust navigation links */
     .navbar .nav-links {
         flex-direction: column;
         gap: 10px;
         align-items: center;
     }
 
-    /* Adjust content overlay text */
     .content-overlay h1 {
         font-size: 2em;
     }
@@ -191,14 +210,12 @@ body {
         font-size: 1em;
     }
 
-    /* Adjust search bar width */
     .search-section input {
         width: 90%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    /* Adjust text size for smaller screens */
     .content-overlay h1 {
         font-size: 1.5em;
     }
@@ -212,7 +229,6 @@ body {
         font-size: 0.9em;
     }
 
-    /* Adjust result item width */
     .result-item {
         width: 100%;
     }
