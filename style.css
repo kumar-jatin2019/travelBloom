@@ -1,0 +1,188 @@
+/* Reset some defaults */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a74da;
+    padding: 10px 20px;
+    color: white;
+    flex-wrap: wrap; /* Adjust for small screens */
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Adjust links for smaller screens */
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px; /* Limit width on larger screens */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-section button {
+    padding: 10px 15px;
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Content Section */
+.content-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.content-section .background-image {
+    background-image: url('https://source.unsplash.com/1600x900/?travel');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+}
+
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    text-align: center;
+}
+
+.content-overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.content-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.book-now {
+    padding: 10px 20px;
+    background-color: #0a74da;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links .social-icon {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+    margin: 20px;
+    text-align: center;
+}
+
+#results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.result-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Adjust navigation links */
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Adjust content overlay text */
+    .content-overlay h1 {
+        font-size: 2em;
+    }
+
+    .content-overlay p {
+        font-size: 1em;
+    }
+
+    /* Adjust search bar width */
+    .search-section input {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust text size for smaller screens */
+    .content-overlay h1 {
+        font-size: 1.5em;
+    }
+
+    .content-overlay p {
+        font-size: 0.9em;
+    }
+
+    .book-now {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    /* Adjust result item width */
+    .result-item {
+        width: 100%;
+    }
+}
