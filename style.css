@@ -144,6 +144,118 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Clean shadow effect */
 }
 
+.about-us {
+    padding: 40px;
+    /* background-color: #f4f4f9; */
+}
+
+.about-company, .team {
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(25% - 20px);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.team-member p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.contact-us {
+    padding: 40px;
+    /* background-color: #f4f4f9; */
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2, .contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #c84d1c;
+    font-size: 16px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #0056b3;
+}
+
 /* City Card Style */
 .city-card {
     display: inline-block;
