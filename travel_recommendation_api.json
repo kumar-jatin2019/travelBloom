@@ -49,6 +49,27 @@
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
           }
         ]
+      },
+      {
+        "id": 4,
+        "name": "India",
+        "cities": [
+          {
+            "name": "Delhi",
+            "imageUrl": "enter_your_image_for_sydney.jpg",
+            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+          },
+          {
+            "name": "Mumbai",
+            "imageUrl": "enter_your_image_for_melbourne.jpg",
+            "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+          },
+          {
+            "name": "Chennai",
+            "imageUrl": "enter_your_image_for_sydney.jpg",
+            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+          }
+        ]
       }
     ],
     "temples": [
