@@ -14,25 +14,41 @@ async function fetchTravelData() {
 }
 
 // Display recommendations
-function displayRecommendations(countries) {
+function displayRecommendations(recommendations) {
     recommendationsContainer.innerHTML = ''; // Clear previous results
 
-    if (countries.length === 0) {
+    if (recommendations.length === 0) {
         recommendationsContainer.innerHTML = `<p class="no-results">No recommendations found.</p>`;
         recommendationsContainer.style.display = 'flex'; // Show message
         return;
     }
 
-    countries.forEach(country => {
-        country.cities.forEach(city => {
-            const cityHTML = `
-                <div class="city-card">
-                    <h3>${city.name}</h3>
-                    <p>${city.description}</p>
-                </div>
-            `;
-            recommendationsContainer.innerHTML += cityHTML;
-        });
+
+
+    // countries.forEach(country => {
+    //     country.cities.forEach(city => {
+    //         const cityHTML = `
+    //             <div class="city-card">
+    //                 <img src="${city.imageUrl}" alt="${city.name}" />
+    //                 <h3>${city.name}</h3>
+    //                 <p>${city.description}</p>
+    //             </div>
+    //         `;
+    //         recommendationsContainer.innerHTML += cityHTML;
+    //     });
+    // });
+    // recommendationsContainer.style.display = 'flex'; // Show recommendations
+
+
+    recommendations.forEach(item => {
+        const recommendationHTML = `
+            <div class="city-card">
+                <img src="${item.imageUrl}" alt="${item.name}" />
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+            </div>
+        `;
+        recommendationsContainer.innerHTML += recommendationHTML;
     });
     recommendationsContainer.style.display = 'flex'; // Show recommendations
 }
@@ -48,16 +64,33 @@ document.getElementById('search-btn').addEventListener('click', () => {
         return;
     }
 
-    const filteredData = travelData.countries.map(country => ({
-        ...country,
-        cities: country.cities.filter(city =>
+    // Search in countries
+    // Search in countries
+    const countryRecommendations = travelData.countries.flatMap(country => 
+        country.cities.filter(city =>
             city.name.toLowerCase().includes(searchInput) ||
             city.description.toLowerCase().includes(searchInput)
         )
-    })).filter(country => country.cities.length > 0);
+    );
 
-    if (filteredData.length > 0) {
-        displayRecommendations(filteredData);
+        // Search in beaches
+    const beachRecommendations = travelData.beaches.filter(beach =>
+        beach.name.toLowerCase().includes(searchInput) ||
+        beach.description.toLowerCase().includes(searchInput)
+    );
+
+    // Search in temples
+    const templeRecommendations = travelData.temples.filter(temple =>
+        temple.name.toLowerCase().includes(searchInput) ||
+        temple.description.toLowerCase().includes(searchInput)
+    );
+
+
+    // Combine all results
+    const allRecommendations = [...countryRecommendations, ...beachRecommendations , ...templeRecommendations];
+
+    if (allRecommendations.length > 0) {
+        displayRecommendations(allRecommendations);
     } else {
         recommendationsContainer.style.display = 'flex';
         recommendationsContainer.innerHTML = `<p class="no-results">No recommendations found.</p>`;
