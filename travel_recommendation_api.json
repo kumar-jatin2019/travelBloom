@@ -8,12 +8,12 @@
         "cities": [
           {
             "name": "Sydney, Australia",
-            "imageUrl": "images/Aus.jpg",
+            "imageUrl": "Images/Aus.jpg",
             "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
           },
           {
             "name": "Melbourne, Australia",
-            "imageUrl": "images/Aus.jpg",
+            "imageUrl": "Images/Aus.jpg",
             "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
           }
         ]
@@ -24,12 +24,12 @@
         "cities": [
           {
             "name": "Tokyo, Japan",
-            "imageUrl": "images/japan.jpg",
+            "imageUrl": "Images/japan.jpg",
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
           },
           {
             "name": "Kyoto, Japan",
-            "imageUrl": "images/japan.jpg",
+            "imageUrl": "Images/japan.jpg",
             "description": "Known for its historic gardens, and traditional tea houses."
           }
         ]
@@ -40,12 +40,12 @@
         "cities": [
           {
             "name": "Rio de Janeiro, Brazil",
-            "imageUrl": "images/brazil.jpg",
+            "imageUrl": "Images/brazil.jpg",
             "description": "A lively city known for its  vibrant carnival celebrations, and iconic landmarks."
           },
           {
             "name": "São Paulo, Brazil",
-            "imageUrl":  "images/brazil.jpg",
+            "imageUrl":  "Images/brazil.jpg",
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
           }
         ]
@@ -56,7 +56,7 @@
         "cities": [
           {
             "name": "Amritsar, India",
-            "imageUrl":  "images/india.jpg",
+            "imageUrl":  "Images/india.jpg",
             "description": "A Place to Visit"
           }
         ]
@@ -66,13 +66,13 @@
       {
         "id": 1,
         "name": "temple",
-         "imageUrl":  "images/india.jpg",
+         "imageUrl":  "Images/india.jpg",
         "description": "A Place to Visit"
       },
       {
         "id": 2,
         "name": "temple",
-         "imageUrl":  "images/bell.jpg",
+         "imageUrl":  "Images/bell.jpg",
         "description": "A Place to Visit"
       }
     ],
@@ -80,13 +80,13 @@
       {
         "id": 1,
         "name": "beach",
-        "imageUrl": "images/beach.jpg",
+        "imageUrl": "Images/beach.jpg",
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
       },
       {
         "id": 2,
         "name": "beach",
-        "imageUrl":"images/sunset.jpg",
+        "imageUrl":"Images/sunset.jpg",
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
       }
     ]
