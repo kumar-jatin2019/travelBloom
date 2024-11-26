@@ -128,6 +128,31 @@ body {
     font-size: 1.1em;
 }
 
+/* Social Icons Section (Fixed and Vertically Centered) */
+.social-icons-vertical {
+    position: fixed;
+    top: 60%;  /* Center vertically */
+    left: 20px;  /* Add space from the left edge (adjust as needed) */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.social-icon {
+    font-size: 1.5rem; /* Adjust size */
+    color: #000; /* Default color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
 /* Recommendations Container */
 #recommendationsContainer {
     display: none; /* Hidden by default */
@@ -168,6 +193,7 @@ body {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .team-member h4 {
     margin: 10px 0 5px;

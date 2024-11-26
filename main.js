@@ -1,6 +1,4 @@
 let travelData = [];
-const recommendationsContainer = document.getElementById('recommendationsContainer');
-recommendationsContainer.style.display = 'none'; // Hide recommendations initially
 
 // Fetch travel data
 async function fetchTravelData() {
@@ -8,6 +6,13 @@ async function fetchTravelData() {
         const response = await fetch('travel_recommendation_api.json');
         const data = await response.json();
         travelData = data; // Store the fetched travel data
+        // console.log(travelData, "travelData");
+
+// // Flatten cities from all countries into one array
+// const allCities = travelData.countries.flatMap(country => country.n);
+
+// // Now allCities will contain all the cities from all countries in a single array:
+// console.log(allCities);
     } catch (error) {
         console.error('Error fetching travel data:', error);
     }
@@ -22,23 +27,6 @@ function displayRecommendations(recommendations) {
         recommendationsContainer.style.display = 'flex'; // Show message
         return;
     }
-
-
-
-    // countries.forEach(country => {
-    //     country.cities.forEach(city => {
-    //         const cityHTML = `
-    //             <div class="city-card">
-    //                 <img src="${city.imageUrl}" alt="${city.name}" />
-    //                 <h3>${city.name}</h3>
-    //                 <p>${city.description}</p>
-    //             </div>
-    //         `;
-    //         recommendationsContainer.innerHTML += cityHTML;
-    //     });
-    // });
-    // recommendationsContainer.style.display = 'flex'; // Show recommendations
-
 
     recommendations.forEach(item => {
         const recommendationHTML = `
